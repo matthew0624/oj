@@ -1,52 +1,75 @@
 #include <stdio.h>
+
 #include <string.h>
+
 #include <stdlib.h>
 
-typedef struct date{
-	int year;
-	int month;
-	int day;
-}date;
+ 
 
+typedef struct info{
 
-date select_min(date one,date two);
+	char name[10];
 
+	int score[3];
+
+	double avg;
+
+}info;
+
+ 
+
+void read_data(info stu[]);
+
+void cal_avg(info stu[]);
+
+void sort(info stu[]);
+
+void print_score(info stu[]);
+
+ 
 
 int main(){
-	date one,two,res;
-	
-	scanf("%d/%d/%d",&one.year,&one.month,&one.day);
-	scanf("%d/%d/%d",&two.year,&two.month,&two.day);
-	
-	res=select_min(one,two);
-	
-	printf("%d/%d/%d",res.year,res.month,res.day);
-	
-	return 0;
+
+	info stu[10];
+
+	read_data();
+
 }
 
-date select_min(date one,date two){
-	date res;
-	if(one.year<two.year){
-		res=one;
+ 
+
+void read_data(info stu[]){
+
+	int i=0;
+
+	for(i=0;i<10;i++){
+
+		scanf("%s %d %d %d",stu[i].name,&stu[i].score[0],&stu[i].score[1],&stu[i].score[2])
+
 	}
-	else if(one.year>two.year)
-		res=two;
-	else{
-		if(one.month<two.month){
-			res=one;
-		}
-		else if(one.month>two.month)
-			res=two;
-		else{
-			if(one.day<two.day){
-				res=one;
-			}
-			else if(one.day>two.day)
-				res=two;
-			else
-				res=one;
-		}
-	}
-	return res;
+
 }
+
+ 
+
+void cal_avg(info stu[]){
+
+	int i=0,j=0,sum=0;
+
+	for(i=0;i<10;i++){
+
+		for(j=0;j<3;j++){
+
+			sum=sum+stu[i].score[j];
+
+		}
+
+		stu[i].avg=sum/3;
+
+		sum=0;
+
+	}
+
+}
+
+ 
