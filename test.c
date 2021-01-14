@@ -27,9 +27,9 @@ int main(){
 		for(i=0;i<10;i++){
 		printf("%d ",N[i].rank);
 	}
+	ww
 	
-	
-	
+	ww
 	for(i=0;i<10;i++){
 		if((N[i].rank==2)||(N[i].rank==6))
 			printf("%d ",N[i].num);
