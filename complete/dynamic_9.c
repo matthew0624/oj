@@ -9,7 +9,7 @@ int main(){
 	scanf("%d",&N);
 	getchar();
 	
-	arr=(char*)malloc(sizeof(char)*N);
+	arr=(char*)malloc(sizeof(char)*N);   //이게 왜 돌아가는지 모르겠네..
 	if(arr==NULL){
 		printf("ERROR");
 		return -1;
