@@ -32,13 +32,13 @@ int main(){
 			if(strlen(arr[i])>strlen(arr[j])){
 				temp=arr[i];
 				arr[i]=arr[j];
-				arr[j]=tmp;
+				arr[j]=temp;
 			}
 		}
 	}
-	
+	printf("\n");
 	for(i=0;i<N;i++){
-		printf("%s\n",arr[i]);
+		printf("%s",arr[i]);
 	}
 	
 	for(i=0;i<N;i++){
