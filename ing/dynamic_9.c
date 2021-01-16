@@ -26,8 +26,7 @@ int main(){
 			printf("ERROR");
 			return -1;
 		}
-		strcpy(arr[i],tmp);
-	
+		
 		len=strlen(arr[i]);
 		printf("strlen: %d\n",len);
 		if(len<min){
