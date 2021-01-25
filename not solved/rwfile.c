@@ -1,4 +1,6 @@
 #include <stdio.h> 
+#include <string.h>
+#include <stdlib.h>
  
 int main() {     
 	int n=1,sum=0,cnt=0,a=0;
@@ -8,16 +10,20 @@ int main() {
 	f=fopen("data.txt","w");
 	if(f==NULL){
 		printf("file not open\n");
-		return 0;
+		return -1;
 	}
-	while (n != EOF)
-	{
-       scanf("%d",&n);
-	   fprintf(f,"why not\n");
-	   fprintf(f,"%d\n",n);
-	   printf("enter in file\n");
-    }
-	fclose(f);
+	
+	
+	while (1){
+		scanf("%d",&n);
+		if(n=="ctr+z"){
+			printf("eof반환");
+			break;
+		}
+		fprintf(f,"why not\n");
+		fprintf(f,"%d\n",n);
+		printf("enter in file\n");
+	}
 	
 	/*
 	f=fopen("data.txt","r");
