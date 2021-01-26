@@ -8,7 +8,7 @@ int main(){
 	double f=0.0;
 
 	scanf("%d",&c);
-	f=c*(9/5)+32;
+	f=c*(9.0/5.0)+32;
 	printf("%.2lf",f);
 	
 	return 0;

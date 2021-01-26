@@ -16,10 +16,8 @@ int main() {
 	
 	while (1){
 		scanf("%d",&n);
-		if(n=="ctr+z"){
-			printf("eof반환");
+		if(n==EOF)
 			break;
-		}
 		fprintf(f,"why not\n");
 		fprintf(f,"%d\n",n);
 		printf("enter in file\n");
