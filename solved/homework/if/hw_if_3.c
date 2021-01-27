@@ -16,16 +16,16 @@ int main(){
 		printf("-\n");
 		flag=1;
 	}
-	if(c/b==a){
+	if(c==a*b){
 		printf("*\n");
 		flag=1;
 	}
-	if(c*b==a){
+	if(c==a/b){
 		printf("/\n");
 		flag=1;
 	}
 	if(flag==0)
-		printf("Incorrect\n");
+		printf("Incorrect");
 
 	return 0;
 }
