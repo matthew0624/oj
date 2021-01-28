@@ -1,29 +1,16 @@
-#include <stdio.h> 
-#include <string.h>
-#include <stdlib.h>
- 
-
+#include<stdio.h>
 int main(){
+    int N=0,cnt=1,tmp=0,i=0,max=0;
 	
-	int a=0,b=0,c=0,res=0;
 	
-	scanf("%d %d",&a,&b);
-	
-	c=a*(b%10);
-	printf("%d\n",c);
-	b=b/10;
-	res=res+c;
-	
-	c=a*(b%10);
-	printf("%d\n",c);
-	b=b/10;
-	res=res+10*c;
-	
-	c=a*b;
-	printf("%d\n",c);
-	res=res+c*100;
-	
-	printf("%d",res);
-	
-	return 0;
+	for(i=0;i<9;i++){
+		scanf("%d",&tmp);
+		if(i==0)
+			max=tmp;
+		if(tmp>max){
+			max=tmp;
+			cnt=i+1;
+		}
+	}
+	printf("%d\n%d",max,cnt);
 }
